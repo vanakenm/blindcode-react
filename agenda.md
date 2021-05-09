@@ -1,0 +1,33 @@
+# Agenda
+
+- Présentations croisées
+- Introductions
+  - Introduction au développement mobile
+  - Intro à React, React Native et Expo
+  - Installation
+  - Première application React Native/Expo
+- JavaScript refresh
+  - Types
+  - Variables
+  - Opérateurs
+  - Boucles
+  - Alternatives
+  - Fonctions
+  - Arrow Functions
+  - JavaScript et le DOM
+- React
+  - NPM & Yarn
+  - JSX & React 
+- React Native
+- Expo
+  - Cycle de développement rapide
+- Construire une application de liste de tâches 
+  - Penser en react
+    - Structure de données
+    - Hiérarchie de composants
+  - Pages et liens
+  - Composants
+  - Props et State
+- Amélioration de l'UX
+- Usage d'un backend avec Firebase
+- Usage d'un backend en PHP
