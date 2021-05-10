@@ -43,20 +43,136 @@ Ouvre une invite de commande qui va interpréter directement chaque ligne entré
     node file.js
 ```
 
+Ne pas hésitez à faire des tests dans le REPL, même pour des éléments très simples.
+
 ## Types de données
 
 - Nombres
+
+```JavaScript
+5
+5 + 3
+
+0.2
+
+0.2 + 0.1
+```
+
+Une idée d'explication?
+
 - String
+
+```JavaScript
+"Bonjour"
+"Bonjour" + " React!"
+```
+
 - Tableaux
+
+```JavaScript
+[1, 2, 3, 5]
+[1, 2, 3, 5].length
+```
+
 - Objets
+
+```JavaScript
+{taille: 5, cours: "Mobile"}
+```
+
 - Date
 
-### String & interpolation
+```JavaScript
+Date
+Date()
+new Date()
+```
 
 ### Var, let and const
 
-## Boucles
+Définir une variable en JavaScript peut se faire de plusieurs manières:
+
+```JavaScript
+var a = 5
+let b = 7
+const c = 18
+```
+
+Une idée des différences ? (voir exemple)
+
+De manière générale: 
+
+- Si constante => const
+- Si pas => let
+
+Aucune raison d'utiliser var aujourd'hui
+
+### String & interpolation
+
+```JavaScript
+let name = "Martin"
+`Bonjour ${name}`
+
+// Same as (but generally prefered to)
+
+"Bonjour " + name
+```
+
 ## Alternatives
+
+```JavaScript
+let age = 17
+if (age < 18) {
+    console.log("Jus d'orange pour vous")
+}
+```
+
+## Boucles
+
+```JavaScript
+for (let step = 0; step < 5; step++) {
+    console.log('Walking east one step');
+}
+```
+
+Dans la réalité, l'immense majorité des boucles se font sur des tableaux:
+
+```JavaScript
+let ages = [17, 25, 36]
+ages.forEach((a) => { console.log("Age: " + a) })
+```
+
+Nous allons reparler de cette construction dans un instant.
+
 ## Fonctions
+
+```JavaScript
+    function add(a, b) {
+        return a + b
+    }
+
+    add(3, 8)
+```
+
 ## Arrow Functions
+
+```JavaScript
+    const add = (a, b) => {
+        return a + b
+    }
+
+    add(3, 8)
+```
+
+Les functions dites "fonction flèches" sont de plus en plus utilisées, surtout pour être utilisées immédiatement:
+
+```JavaScript
+let ages = [17, 25, 36]
+
+ages.forEach(function(a) {console.log(a)}) 
+ages.forEach(a => console.log(a)) 
+```
+
 ## JavaScript et le DOM
+
+Windows, documents, getElementById, etc
