@@ -1,5 +1,10 @@
 # JavaScript moderne
 
+## Référence
+
+- Prettier: https://prettier.io/
+- XXX
+
 ## Pourquoi parler de JavaScript maintenant ? 
 
 Expo & React & React Native sont du JavaScript!
@@ -20,6 +25,8 @@ Objectif: apprendre le JavaScript "moderne" (le language a beaucoup évolué)
 Question: le language évolue vite - mais est exécuté par les navigateurs qui sont loin d'être tous mis à jour - comment régler ce problème?
 
 "Compilateurs" JavaScript moderne -> version compatible, typiquement Babel. Cela va nous être très utile dans un instant.
+
+LA référence: https://developer.mozilla.org/fr/docs/Web/JavaScript (MDN!)
 
 ## Node, REPL et console
 
@@ -77,7 +84,7 @@ Une idée d'explication?
 - Objets
 
 ```JavaScript
-{taille: 5, cours: "Mobile"}
+{ taille: 5, cours: "Mobile" }
 ```
 
 - Date
@@ -127,6 +134,18 @@ if (age < 18) {
 }
 ```
 
+Egalité et "triple égalité"
+
+```JavaScript
+"" == 0
+// true
+
+"" === 0
+// false
+```
+
+En résumé: toujours utilisé le triple égal ou équivalent (===, !==)
+
 ## Boucles
 
 ```JavaScript
@@ -154,6 +173,8 @@ Nous allons reparler de cette construction dans un instant.
     add(3, 8)
 ```
 
+Attention à ne pas confondre retourner une valeur et afficher une valeur.
+
 ## Arrow Functions
 
 ```JavaScript
@@ -175,4 +196,34 @@ ages.forEach(a => console.log(a))
 
 ## JavaScript et le DOM
 
-Windows, documents, getElementById, etc
+Le premier usage de JavaScript est habituellement d'intéragir avec le DOM: window, document, getElementById, etc
+
+Je ne vais pas m'étendre sur le sujet ici, vu que notre focus est ailleurs
+
+## Exercices
+
+### Bonjour le monde
+
+- Créer une fonction "greet" qui prend un paramètre (le nom de la personne) et affiche en retour "Bonjour 'nom'"
+- Faire la même chose mais en _retournant_ le nom plutôt que de l'afficher.
+- Essayer d'utiliser de l'interpolation plutôt que l'opérateur "+"
+
+### Fibonacci
+
+Créer une fonction "fibo" prenant un nombre N en entrée et qui renvoie le Nième nombre de la série de Fibonacci. 
+
+Pour rappel, chaque nombre de la série est la sommes des deux précédents, et les deux premiers sont 1 et 1 donc:
+
+1, 1, 2, 3, 5, 8, 13 ...
+
+### Cotes
+
+Créer une fonction "cotes" qui prend en paramètre un tableau d'entier représentant des cotes (un entier entre 0 et 20)
+
+La fonction doit renvoyer un objet JavaScript contenant:
+
+- Le nombre de cotes sous la clé "nombre"
+- La meilleure note sous la clé "max"
+- La moyenne des cotes sous la clés "moyenne"
+
+Il est possible (et recommandé) de procéder par étapes !
