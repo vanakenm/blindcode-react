@@ -80,7 +80,7 @@ Installez l'application Expo sur votre téléphone mobile ([iOS](https://apps.ap
 ### Création d'une application
 
 ```bash
-    expo init MonApplication
+    expo init -t blank MonApplication
     cd MonApplication
     yarn install
     yarn start

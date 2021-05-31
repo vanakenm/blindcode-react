@@ -3,7 +3,7 @@
 ## Référence
 
 - Prettier: https://prettier.io/
-- XXX
+- MDN: https://developer.mozilla.org/fr/docs/Web/JavaScript
 
 ## Pourquoi parler de JavaScript maintenant ? 
 
@@ -131,6 +131,8 @@ let name = "Martin"
 let age = 17
 if (age < 18) {
     console.log("Jus d'orange pour vous")
+} else {
+
 }
 ```
 
@@ -207,6 +209,11 @@ Je ne vais pas m'étendre sur le sujet ici, vu que notre focus est ailleurs
 - Créer une fonction "greet" qui prend un paramètre (le nom de la personne) et affiche en retour "Bonjour 'nom'"
 - Faire la même chose mais en _retournant_ le nom plutôt que de l'afficher.
 - Essayer d'utiliser de l'interpolation plutôt que l'opérateur "+"
+- Faite une version avec "function" et une autre avec une "arrow function"
+
+### Add
+
+
 
 ### Fibonacci
 
