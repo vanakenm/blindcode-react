@@ -4,6 +4,7 @@ Nous allons progressivement construire une petite application de gestion de tâc
 
 - Composants
 - state & props
+  - Un composant "greetings" avec une props = name
 - Listes
 - Afficher, éditer, supprimer
 - Sauvegarde de l'état dans le "Storage"

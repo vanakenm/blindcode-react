@@ -4,6 +4,7 @@
 
 - Prettier: https://prettier.io/
 - MDN: https://developer.mozilla.org/fr/docs/Web/JavaScript
+- MDN: https://developer.mozilla.org/fr/docs/Web/JavaScript/A_re-introduction_to_JavaScript
 
 ## Pourquoi parler de JavaScript maintenant ? 
 
