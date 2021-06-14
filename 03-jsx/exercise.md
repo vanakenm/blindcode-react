@@ -22,12 +22,14 @@ Créer une nouvelle application expo dans un répértoire distinct
 ```bash
 expo init -t blank euro2020
 cd euro2020
+code .
+expo start --web
 ```
 
 ## Données
 
 Dans App.js, créer un tableau avec les résultats de matchs de foot - à ajouter juste en dessous de App()
-Les données sont donc un tableau qui contient des objects javascripts avec pour chacun quatre informations:
+Les données sont donc un tableau qui contient des objets JavaScript avec pour chacun quatre informations:
 
 - team1: Nom de l'équipe 1 (chaine de caractères)
 - team2: Nom de l'équipe 2 (chaine de caractères)
@@ -58,9 +60,9 @@ Le point important pour arriver au bout est d'y aller étape par étape, en test
 3. Utiliser ce composant Match dans App (toujours sans paramètre)
 4. Ajouter deux paramètres à Match: team1 et team2 et passer des noms de pays
 5. Récupérer et utiliser ces informations dans le composant Match (via les props)
-4. Ajouter deux paramètres à Match: score1 et score2 et passer des score
-5. Prendre le tableau matches et faire un .map dessus et passer les différent paramètres au composant Match. Ici la fonction map va passer sur tous les résultats, avec pour chaquun les quatre propriétés définies dans le tableau.
-6. Créer dans match une variable "resultat" (chaine de caractère). Y assigner le pays gagnant ou "égalité" en comparant les scores (if/else if/else vu qu'il y a trois cas possible)
+6. Ajouter deux paramètres à Match: score1 et score2 et passer des score
+7. Prendre le tableau matches et faire un .map dessus et passer les différent paramètres au composant Match. Ici la fonction map va passer sur tous les résultats, avec pour chaquun les quatre propriétés définies dans le tableau.
+8. Créer dans match une variable "resultat" (chaine de caractère). Y assigner le pays gagnant ou "égalité" en comparant les scores (if/else if/else vu qu'il y a trois cas possible)
 
 
 
