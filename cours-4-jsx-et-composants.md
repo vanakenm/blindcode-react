@@ -85,3 +85,126 @@ Donc:
 
 - Props == arguments en entrée
 - Peuvent elles mêmes appelée d'autre fonctions
+
+## Un premier composant
+
+Nous allons permettre à notre application de dire Bonjour en créant un composant "Greetings"
+
+<Greetings name="Martin" />
+
+Qui devrait afficher à l'écran
+
+"Bonjour Martin"
+
+## Composant "en ligne"
+
+Pour commencer on peut simplement créer le composant "en ligne" c'est à dire dans le code de App.js:
+
+```Javascript
+export default function App() {
+  let name = "Martin"
+  return (
+    <View style={styles.container}>
+      <Text>Bonjour {name}</Text>
+      <StatusBar style="inverted" />
+    </View>
+  );
+}
+```
+
+On voit ici que l'on peut utiliser dans le JSX une variable JavaScript définie plus haut (name)
+
+## Créer un composant
+
+Un composant n'est jamais qu'une fonction JavaScript qui renvoie du JSX:
+
+```Javascript
+function Greetings() {
+  let name = "Martin"
+  return (
+    <Text>Bonjour {name}</Text>
+  )
+}
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Greetings />
+      <StatusBar style="inverted" />
+    </View>
+  );
+}
+```
+
+## Passer des paramètres
+
+Un composant peut recevoir des paramètre sous forme d'une variable unique habituellement appelée "props" ("propriétés") - mais cette variable est un object JavaScript qui peut donc avoir plusieurs "champs"
+
+```Javascript
+function Greetings(props) {
+  let name = props.name
+  return (
+    <Text>Bonjour {name}</Text>
+  )
+}
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Greetings name="Martin"/>
+      <StatusBar style="inverted" />
+    </View>
+  );
+}
+```
+## Plusieurs composants
+
+Une fois défini, un composant (comme une fonction) peut être appellé plusieurs fois avec des paramètres différents.
+
+```Javascript
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Greetings name="Martin"/>
+      <Greetings name="Khadija"/>
+      <StatusBar style="inverted" />
+    </View>
+  );
+}
+```
+
+## Boucle
+
+En supposant que l'on ai les noms des gens à saluer dans un tableau, comment faire pour utiliser le tableau? Généralement via une boucle, ce que l'on va faire ici:
+
+```Javascript
+export default function App() {
+  let names = ["Martin", "Khadija", "Sarah"]
+  return (
+    <View style={styles.container}>
+      <Text >Bonjour {name}</Text>
+      {
+        names.map((name) => 
+          <Greetings name={name}/>
+        )
+      }
+      <StatusBar style="inverted" />
+    </View>
+  );
+}
+```
+
+Pour détailler:
+
+- On défini un tableau avec les noms
+- A l'intérieur du jsx, on peut utiliser les accolades ({}) pour insérer du code javascript
+- Dans ce cas ci, on veut itérer sur le tableau "names"
+- "map" est similaire à "forEach" mais retourne la valeur produire à chaque itération, ce qui permet ici de l'afficher. Le paramètre est lui même une fonction, donc ici via les fonctions flèches.
+- Le contenu prend simplement la valeur du tableau (`name`) et affiche le composant `<Greetings />`
+
+
+
+
+- Plusieurs composants
+- Boucle
+- FlatList

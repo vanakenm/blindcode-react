@@ -13,10 +13,10 @@
 let cotes = [18, 16, 12]
 
 // Avec function et un simple for
-function somme(points) {
+function somme(nombres) {
   let total = 0
-  for(let i = 0;i < points.length; i++) {
-    total += points[i]
+  for(let i = 0;i < nombres.length; i++) {
+    total += nombres[i]
   }
   return total
 }
@@ -24,10 +24,33 @@ function somme(points) {
 let res = somme(cotes)
 console.log(res)
 
+// Avec function et for... in
+// For.. In itére sur les propriétés d'un object
+function sommeIn(points) {
+  let total = 0
+  for(let i in points) {
+    total += points[i]
+  }
+  return total
+}
+
+console.log(sommeIn(cotes))
+
+// Avec function et for... of
+// For.. In itére sur les index d'un Array
+function sommeOf(points) {
+  let total = 0
+  for(let point of points) {
+    total += point
+  }
+  return total
+}
+console.log(sommeOf(cotes))
+
 // Même exemple avec avec une fonction "flèche"
 const sommefleche = (points) => {
   let total = 0
-  for(let i = 0;i < points.length; i++) {
+  for(let i in points) {
     total += points[i]
   }
   return total
