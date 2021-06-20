@@ -15,6 +15,8 @@ Par exemple
     France 1 - 1 Finlande
     Egalité
 
+Pour vous rassurer ma solution (import, styles & espaces compris) ne fait pas 50 lignes.
+
 ## Installation
 
 Créer une nouvelle application expo dans un répértoire distinct
@@ -63,6 +65,21 @@ Le point important pour arriver au bout est d'y aller étape par étape, en test
 6. Ajouter deux paramètres à Match: score1 et score2 et passer des score
 7. Prendre le tableau matches et faire un .map dessus et passer les différent paramètres au composant Match. Ici la fonction map va passer sur tous les résultats, avec pour chaquun les quatre propriétés définies dans le tableau.
 8. Créer dans match une variable "resultat" (chaine de caractère). Y assigner le pays gagnant ou "égalité" en comparant les scores (if/else if/else vu qu'il y a trois cas possible)
+
+## Aller plus loin
+
+Tester l'application sur le téléphone.
+
+### Données
+
+Utliser plus de données - j'ai un fichier plus complet avec les résultats:
+
+- Plus de matchs
+- Deux informations supplémentaires: la date et le groupe
+
+1. Utilisez ces données à la place du petit tableau (juste le remplacer)
+1. Créer un fichier data.json et l'importer plutôt que de créer un tableau directement.
+1. Dans une situation réelle, ces résultats ne sont pas stockés dans l'application mais récupérés sur un serveur (une "API"). Pour simuler ceci, allez récupérer le fichier directement sur GitHub ()
 
 
 
