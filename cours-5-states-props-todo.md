@@ -3,11 +3,14 @@
 Nous allons progressivement construire une petite application de gestion de tâches ce qui va nous permettre de couvrir pas mal de sujets:
 
 - Composants
-- state & props
-  - Un composant "greetings" avec une props = name
-- Listes
 - Afficher, éditer, supprimer
+- Gérer un état via "setState"
+- Listes
 - Sauvegarde de l'état dans le "Storage"
+
+## State
+
+## Formes
 
 ## Etapes
 
