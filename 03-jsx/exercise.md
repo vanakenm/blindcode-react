@@ -68,18 +68,50 @@ Le point important pour arriver au bout est d'y aller étape par étape, en test
 
 ## Aller plus loin
 
-Tester l'application sur le téléphone.
+Les points suivants sont des propositions d'amélioration. Aucun n'est hors de portée, mais ils peuvent demander un peu de recherche personnelle pour trouver comment s'y prendre.
 
-### Données
+### FlatList
 
-Utliser plus de données - j'ai un fichier plus complet avec les résultats:
+Remplacer la boucle par une FlatList - voir https://docs.expo.io/versions/latest/react-native/flatlist/
+
+### Récupérer les données
+
+Utliser plus de données - j'ai un fichier plus complet avec les résultats (https://github.com/vanakenm/blindcode-react/blob/master/03-jsx/data.json):
 
 - Plus de matchs
 - Deux informations supplémentaires: la date et le groupe
 
 1. Utilisez ces données à la place du petit tableau (juste le remplacer)
 1. Créer un fichier data.json et l'importer plutôt que de créer un tableau directement.
-1. Dans une situation réelle, ces résultats ne sont pas stockés dans l'application mais récupérés sur un serveur (une "API"). Pour simuler ceci, allez récupérer le fichier directement sur GitHub ()
+1. Dans une situation réelle, ces résultats ne sont pas stockés dans l'application mais récupérés sur un serveur (une "API"). Pour simuler ceci, allez récupérer le fichier directement sur GitHub (https://raw.githubusercontent.com/vanakenm/blindcode-react/master/03-jsx/data.json) depuis l'application. Ceci nécessite d'utiliser la fonction "fetch" - voir https://developer.mozilla.org/fr/docs/Web/API/Fetch_API/Using_Fetch sur MDN pour comment faire.
+
+### Données par groupe
+
+Avec le fichier complet, modifier l'application pour afficher les résultats pour chaque groupe donc:
+
+- Groupe A
+  - Allemagne 0-1 France
+  - France 1-1 Hongrie
+...
+
+- Groupe B
+
+Les groupes peuvent être spécifié comme "headers" via https://reactnative.dev/docs/accessibility#accessibilityrole
+
+Les groupes peuvent être créer comme étant leur propre composant "Group" qui contiendrait une liste de Matchs.
+
+Il est possible de filtrer un tableau avec filter: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+
+
+### Statistiques par équipes
+
+En dessous du tableau des matches, affichez les totaux de chaque équipe:
+
+- Nombre de victoires et de défaites
+- Score total (victoire = 3 points, défaite = 0 points, égalité = 1 point)
+- Total des buts marqués
+- Total des buts concédés
+
 
 
 
