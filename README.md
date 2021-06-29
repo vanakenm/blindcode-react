@@ -8,3 +8,5 @@
 - [JavaScript Moderne - exercices](https://github.com/vanakenm/blindcode-react/blob/master/cours-3-javascript-moderne-exercices.md)
 - [JSX et composants](https://github.com/vanakenm/blindcode-react/blob/master/cours-4-jsx-et-composants.md)
 - [Exercice: Euro 2021](https://github.com/vanakenm/blindcode-react/blob/master/03-jsx/exercise.md)
+- [Corrigé: Euro 2021](https://github.com/vanakenm/blindcode-euro2021)
+- [Gérer un état](https://github.com/vanakenm/blindcode-react/blob/master/cours-5-gerer-un-etat.md)
