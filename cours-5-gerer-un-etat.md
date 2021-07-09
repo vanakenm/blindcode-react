@@ -110,25 +110,13 @@ C'est ce à quoi sert "useState" - une méthode fournir par React qui permet de 
   const [clicks, setClicks] = useState(0)
 ```
 
-getter, setter = useState(initialValue)
+On peut alors utiliser "clicks" comme variable partout où elle doit être affichée ou tester et "setClicks" pour la mettre à jour. React se charge de mettre à jour/redessiner tous les composants qui en ont besoin suite au changement.
 
-## Plus tard
-## Interactions en mobile
+Exemple:
 
-Attention, interagir avec une application mobile n'est pas pareil qu'avec un site web:
-
-- Pas de "hover"
-- Les doigts sont plus gros et moins précis qu'une souris
-- Clavier nettement moins efficace
-
-## Boutons
-
-## Text Inputs
-
-<TextInput value={} onChange={e => ...}>
-
-Accessibilité:
-
-- accessibilityLabel
-- placeholder
-- accessibilityHint
+```JavaScript
+    <View style={styles.container}>
+      <Button onPress={() => setClicks(clicks + 1)} title="Click me" accessibilityLabel="Click here to become the best clicker!"/>
+      <Text>You clicked {clicks} times</Text>
+    </View>
+```
