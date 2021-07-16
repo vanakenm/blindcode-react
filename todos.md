@@ -58,7 +58,7 @@ A l'aide soit d'une boucle avec `map` soit d'une `FlatList`, afficher toutes les
 Dans notre cas, cet état est un tableau
 
 ```javascript
-  let [todos, setTodos] = useState(TASKS)
+  const [todos, setTodos] = useState(TASKS)
 ```
 
 Pour rappel, `useState` prend un paramètre (l'état initiam) et renvoie un tableau de deux éléments - la variable et un setter pour celle-ci.
@@ -117,7 +117,7 @@ Si le code est implémenté correctement, les tâches doivent changer de liste q
 On va ajouter une section supplémentaire pour permettre d'encoder une nouvelle tâche. Pour ce faire il faut
 
 - Une `View` pour contenir
-- Un `TextView` pour encoder le texte
+- Un `TextInput` pour encoder le texte
 - Un `Button` pour confirmer la création de la tâche
 
 A nouveau, d'abord s'assurer que la section s'affiche correctement, même sans aucun comportement.
@@ -126,6 +126,42 @@ A nouveau, d'abord s'assurer que la section s'affiche correctement, même sans a
 
 Ajouter un nouveau `useState` pour le texte de la nouvelle tâche nommé `newTaskText`, initialisé à la chaine vide.
 
-Pour joindre cet état et le composant Text crée plus haut.
+Pour joindre cet état et le composant Text crée plus haut, il faut utiliser le "onChangeText" (comme fait dans un exercice précédent):
+
+```JavaScript
+<TextInput placeholder="Ecrire le titre de la tâche" value={newTaskText} onChangeText={(value) => ...} />
+```
+
+Avec ceci, on a la garantie que `newTaskText` contient à tout moment la valeur écrite dans le champs 
+
+### Créer la tâche quand on appuie sur le bouton
+
+Le but ici est d'ajouter une fonction `addTask` qui va créer un nouvel object task, l'ajouter au tableau et appeller setTodos pour mettre à jour l'écran. La fonction devrait être appellée quand on appuie sur le bouton crée plus haut.
+
+```JavaScript
+function addTask() {
+  let id = ... // On devrait avoir une valeur ici qui ne soit pas encore utilisée - comment?
+  let name = ... // Comment récupérer la valeur?
+
+  let newTask = { id: id, name: name, done: false}
+
+  let newTodos = ...
+
+  setTodos(newTodos)
+
+}
+```
+
+## Pour ceux qui s'ennuient
+
+### Séparer les pages
+
+Avoir des pages séparées pour:
+
+- Tâches faites
+- Tâches à faire
+- Nouvelle tâche
+
+Via https://reactnavigation.org/docs/hello-react-navigation/
 
 
