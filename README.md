@@ -10,3 +10,4 @@
 - [Exercice: Euro 2021](https://github.com/vanakenm/blindcode-react/blob/master/03-jsx/exercise.md)
 - [Corrigé: Euro 2021](https://github.com/vanakenm/blindcode-euro2021)
 - [Gérer un état](https://github.com/vanakenm/blindcode-react/blob/master/cours-5-gerer-un-etat.md)
+- [Enoncé liste de tâches](https://github.com/vanakenm/blindcode-react/blob/master/todos.md)

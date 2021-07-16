@@ -88,7 +88,7 @@ let todosDone = todos.filter((task) => ...)
 let todosNotDone = todos.filter((task) => ...)
 ```
 
-### Marquer une tâche comem "done"
+### Marquer une tâche comme "done"
 
 On va maintenant s'intéresser à faire fonctionner le bouton. 
 
@@ -113,4 +113,19 @@ La même logique peut s'appliquer dans l'autre sens (pour les tâches déjà fai
 Si le code est implémenté correctement, les tâches doivent changer de liste quand on les marques comme effectuées.
 
 ### Ajouter une nouvelle tâche
+
+On va ajouter une section supplémentaire pour permettre d'encoder une nouvelle tâche. Pour ce faire il faut
+
+- Une `View` pour contenir
+- Un `TextView` pour encoder le texte
+- Un `Button` pour confirmer la création de la tâche
+
+A nouveau, d'abord s'assurer que la section s'affiche correctement, même sans aucun comportement.
+
+### Créer un état pour la nouvelle tâche
+
+Ajouter un nouveau `useState` pour le texte de la nouvelle tâche nommé `newTaskText`, initialisé à la chaine vide.
+
+Pour joindre cet état et le composant Text crée plus haut.
+
 
