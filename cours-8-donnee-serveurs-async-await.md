@@ -63,7 +63,7 @@ Le plus important est de comprendre la structure des résultats et où se trouve
 
 Voici un petit exemple de code pour récupérer les données de l'API
 ```JavaScript
-const URL = "https://opendata.bruxelles.be/api/records/1.0/search/?dataset=bruxelles_musees&q="
+const URL = "https://opendata.bruxelles.be/api/records/1.0/search/?dataset=musees-a-bruxelles&q="
 
 export default function App() {
   const [musees, setMusees] = useState([]);
@@ -145,4 +145,11 @@ La solution est ce petit morceau de code:
 ## Application complète
 
 Avec les éléments plus haut, vous avez ce qu'il vous faut pour compléter l'application - une fois les données disponible dans une variable, peut importe comment elles sont arrivée (valeurs dans une constante ou via une API comme ici !).
+
+## Pour ceux qui s'ennuient
+
+- Explorer la pagination
+  - Marquer le nombre de résultats totaux
+  - Créer un bouton "page précédente" + "page suivante"
+  - Comment changer le contenu ? (hint: il va falloir toucher au second paramètre de "useEffect")
 
