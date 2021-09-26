@@ -14,8 +14,9 @@
 - [Accéder à des données en ligne via une API](https://github.com/vanakenm/blindcode-react/blob/master/cours-8-donnee-serveurs-async-await.md)
 - [Paginer et recherche](https://github.com/vanakenm/blindcode-react/blob/master/cours-9-paginer-recherche.md)
 
-### Exercices
+### Exercices & Corrigés
 
 - [Exercice: Euro 2021](https://github.com/vanakenm/blindcode-react/blob/master/03-jsx/exercise.md)
 - [Corrigé: Euro 2021](https://github.com/vanakenm/blindcode-euro2021)
 - [Enoncé liste de tâches](https://github.com/vanakenm/blindcode-react/blob/master/todos.md)
+- [Corrigé: API Musée](https://github.com/vanakenm/blindcode-api-musees)
