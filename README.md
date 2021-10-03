@@ -13,6 +13,7 @@
 - [Utiliser un tableau comme état](https://github.com/vanakenm/blindcode-react/blob/master/cours-7-usestate-et-tableaux.md)
 - [Accéder à des données en ligne via une API](https://github.com/vanakenm/blindcode-react/blob/master/cours-8-donnee-serveurs-async-await.md)
 - [Paginer et recherche](https://github.com/vanakenm/blindcode-react/blob/master/cours-9-paginer-recherche.md)
+- [Naviguer](./cours-10-voir-detail-naviguer.md)
 
 ### Exercices & Corrigés
 
