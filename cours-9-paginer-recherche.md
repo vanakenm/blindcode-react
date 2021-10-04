@@ -41,7 +41,6 @@ On l'a vu, l'API renvoie autre chose que la liste de record - le JSON commence p
 ```Json
 "nhits":45,
 "parameters":{
-
     "dataset":"musees-a-bruxelles",
     "timezone":"UTC",
     "rows":10,
