@@ -32,7 +32,7 @@ npm install @react-navigation/native-stack
 
 ### Créer deux écrans pour tester
 
-Dans App.js on va créer deux composants très simple pour tester la navigation.
+Dans App.js on va créer deux composants très simples pour tester la navigation.
 
 ```JavaScript
 function DetailsScreen() {
@@ -57,6 +57,11 @@ function HomeScreen() {
 Reste à créer un composant qui puisse contenir nos deux écrans et permettre de passer de l'un à l'autre:
 
 ```JavaScript
+import * as React from 'react';
+import { View, Text, Button } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -82,7 +87,10 @@ On peut adapter le composant Home comme suit:
 
 ```JavaScript
 function HomeScreen(props) {
+  // l'objet 'navigation' est définie et passée via React Navigation
   let navigation = props.navigation
+  
+  // on peut s'en servir pour naviguer vers n'importe quel écran via son "name"
   return (
     <View>
       <Text>Home Screen</Text>
@@ -100,9 +108,48 @@ A savoir
 - Récupérer dans "props" un paramètre "navigation" (fourni par `React Navigation`)
 - Ajouter un bouton qui utilise `navigation.navigate()` pour passer à l'écran de détails. 
 
+## Navigation et paramètres
+
+Il y a beaucoup de cas où l'on va vouloir passer des informations du composant "principal" à celui vers lequel on navigue. Imaginons que notre écran "Home" affiche une liste de nom (des clients, des étudiants, des amis, peu importe ici) et que pour chaque on veut définir un écran de détail - qui doit donc être différent pour chacun.
+
+Pour simplifier on va juste créer un second bouton dans l'écran Home et ajouter un paramètre -  la fonction `navigate` en prend deux - le nom du composant vers lequel naviguer, puis un objet JavaScript avec autant de propriété que l'on souhaite:
+
+```JavaScript
+      <Button
+        title="Go to Details for Bob"
+        onPress={() => navigation.navigate('Details', { name: "Bob"})}
+      />
+      <Button
+        title="Go to Details for Julie"
+        onPress={() => navigation.navigate('Details', { name: "Julie"})}
+      />
+``` 
+
+J'ai crée deux boutons manuellement ici - mais ceci pourrait sans problème être des composants générés via un tableau avec `map`.
+
+Du côté du composant, on peut récupérer le paramètre `name` via `route`:
+
+```JavaScript
+function DetailsScreen(props) {
+  let { route, navigation } = props
+  let name = route.params.name
+  return (
+    <View>
+      <Text>Details Screen for {name}</Text>
+    </View>
+  );
+}
+```
+
 ## Naviguer dans notre application "Musées"
 
 - A partir de l'API musee
-- Faire une page de detail accessible via touch
+- ajouter react navigation
+- notre composant devient le "Home"
+- ajouter un bouton "detail" à chaque musée
+- lui passer le nom du musée
+- afficher le détail avec juste le nom
 - Passer le record complet
+- afficher le tout
+- alternative: passer juste l'id & data (comment?)
 - Back button
