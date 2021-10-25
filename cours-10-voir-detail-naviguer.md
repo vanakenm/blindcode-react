@@ -19,7 +19,7 @@ Donc, une nouvelle application:
 ```bash
 expo init -t blank nav
 cd nav
-yarn start
+expo start --web
 ```
 ### Installer React Navigation
 
@@ -96,6 +96,7 @@ function HomeScreen(props) {
       <Text>Home Screen</Text>
       <Button
         title="Go to Details"
+        uppercase={false}
         onPress={() => navigation.navigate('Details')}
       />
     </View>
@@ -140,16 +141,3 @@ function DetailsScreen(props) {
   );
 }
 ```
-
-## Naviguer dans notre application "Musées"
-
-- A partir de l'API musee
-- ajouter react navigation
-- notre composant devient le "Home"
-- ajouter un bouton "detail" à chaque musée
-- lui passer le nom du musée
-- afficher le détail avec juste le nom
-- Passer le record complet
-- afficher le tout
-- alternative: passer juste l'id & data (comment?)
-- Back button
